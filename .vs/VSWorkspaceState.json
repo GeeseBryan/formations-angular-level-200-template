@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\starwars-game",
-    "\\starwars-game\\projects"
+    "\\api",
+    "\\api\\long-api",
+    "\\api\\long-api\\game-api",
+    "\\starwars-game"
   ],
+  "SelectedNode": "\\starwars-game\\README.md",
   "PreviewInSolutionExplorer": false
 }

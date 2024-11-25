@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { GameModule } from './features/game/game.module';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
+import { ComponentSearchComponent } from './shared/components/search/search.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SideBarComponent
+    SideBarComponent,
+    ComponentSearchComponent
   ],
   imports: [
     BrowserModule,
