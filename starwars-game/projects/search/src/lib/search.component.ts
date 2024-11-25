@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'component-search',
+  imports: [ ReactiveFormsModule ],
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
+  standalone: true
 })
 export class SearchComponent {
 
