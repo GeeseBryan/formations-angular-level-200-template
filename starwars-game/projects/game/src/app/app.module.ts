@@ -9,10 +9,10 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { SideBarComponent } from './shared/components/side-bar/side-bar.component';
 import { SearchComponent } from 'search';
 import { HeaderModule } from './shared/components/header/header.module';
+import { StatisticsComponent } from 'statistics';
 
 @NgModule({ declarations: [
         AppComponent,
-        // HeaderComponent,
         SideBarComponent,
     ],
     bootstrap: [AppComponent, HeaderComponent, SideBarComponent],
@@ -22,6 +22,7 @@ import { HeaderModule } from './shared/components/header/header.module';
         AppRoutingModule,
         GameModule,
         SearchComponent,
+        StatisticsComponent,
         HeaderModule
       ], 
         providers: [provideHttpClient(withInterceptorsFromDi())] })
