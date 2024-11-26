@@ -15,6 +15,9 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
+      "characters": [
+        "./dist/characters"
+      ],
       "search": [
         "./dist/search"
       ],

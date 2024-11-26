@@ -1,0 +1,21 @@
+<div>Characters</div>
+
+@let characters = characters$ | async;
+
+@if (characters && characters.results) {
+    @for (item of characters.results; track item) {
+        <div>{{ item.id }}</div>
+        <div>{{ item.name }}</div>
+        <div>{{ item.birth_year }}</div>
+      }
+}
+
+<div>§SPLIT§</div>
+
+@if (dataCharacters) {
+    @for (item of dataCharacters; track item) {
+        <div>{{ item.id }}</div>
+        <div>{{ item.surname }}</div>
+        <div>{{ item.birthYear }}</div>
+      }
+}
