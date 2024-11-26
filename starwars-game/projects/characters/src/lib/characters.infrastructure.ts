@@ -17,6 +17,8 @@ export interface GetCharacters<T> {
     }
   }
 
+  /* isDevMode for testing */
+
 @Injectable({
 providedIn: 'root',
 useFactory: (httpClient: HttpClient) => isDevMode() ? new CharactersInfrastructure(httpClient): fakeInfra,
@@ -28,9 +30,6 @@ export class CharactersInfrastructure implements GetDataCharacters {
 
     public getCharacters(): Observable<CharactersDataModelDto> {
         const url: string = 'https://swapi.dev/api/people/';
-        if (this.httpClient) {
             return this.httpClient.get<CharactersDataModelDto>(url);
-        }
-        return fakeInfra.getCharacters();
     }
 }
