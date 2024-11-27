@@ -8,8 +8,7 @@
     "build:libs:game": "ng build game",
     "build:libs:characters": "ng build characters",
     "build:libs": "npm run build:libs:statistics && npm run build:libs:search && npm run build:libs:game && npm run build:libs:characters",
-    "prebuild":"npm run build:libs",
-
+    "prebuild": "npm run build:libs",
     "start:api": "pm2 restart ../api/long-api/game-api/bin/www",
     "prestart": "npm run start:api",
     "start": "ng serve",
@@ -27,6 +26,7 @@
     "@angular/platform-browser": "^18.2.12",
     "@angular/platform-browser-dynamic": "^18.2.12",
     "@angular/router": "^18.2.12",
+    "@ngrx/store": "^18.1.1",
     "rxjs": "^7.8.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.14.10"

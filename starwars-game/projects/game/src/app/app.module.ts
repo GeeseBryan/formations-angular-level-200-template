@@ -1,4 +1,7 @@
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,20 +13,23 @@ import { SideBarComponent } from './shared/components/side-bar/side-bar.componen
 import { SearchComponent } from 'search';
 import { HeaderModule } from './shared/components/header/header.module';
 import { StatisticsComponent } from 'statistics';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 
-@NgModule({ declarations: [
-        AppComponent,
-        SideBarComponent,
-    ],
-    bootstrap: [AppComponent, HeaderComponent, SideBarComponent],
-     imports: 
-     [
-        BrowserModule,
-        AppRoutingModule,
-        GameModule,
-        SearchComponent,
-        StatisticsComponent,
-        HeaderModule
-      ], 
-        providers: [provideHttpClient(withInterceptorsFromDi())] })
-export class AppModule { }
+@NgModule({
+  declarations: [AppComponent, SideBarComponent],
+  bootstrap: [AppComponent, HeaderComponent, SideBarComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    GameModule,
+    SearchComponent,
+    StatisticsComponent,
+    HeaderModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+    }),
+  ],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
+})
+export class AppModule {}
